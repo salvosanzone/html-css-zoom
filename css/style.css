@@ -76,20 +76,19 @@ footer {
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  padding: 10px;
   background-color: #222222;
   color: white;
 }
 
-footer .left-footer ul,  .central-footer ul {
+footer .left-footer ul,
+.central-footer ul {
   display: flex;
 }
-footer .left-footer li, .central-footer li {
+footer .left-footer li,
+.central-footer li {
   list-style: none;
   cursor: pointer;
 }
-
-
 
 footer .right-footer {
   color: #f70302;
