@@ -10,9 +10,9 @@ body {
 header {
   display: flex;
   justify-content: flex-end;
-  /* position: fixed;
+  /* position: fixed; */
   top: 0;
-  z-index: 999; */
+  z-index: 999;
   width: 100%; /*dare la width se uso fixed*/
   height: 50px;
   padding: 8px;
@@ -42,19 +42,19 @@ main {
 
 main .container-pic {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap; /*cosi vanno a capo*/
-  width: 97%;
+  width: 100%;
   height: 100%;
   margin: auto;
+  overflow-y: scroll
 }
 
 .container-pic .pic {
   position: relative;
 
-  width: 182px;
+  width: 192px;
   height: 100px;
-  margin: 2px;
-  background-color: cornflowerblue;
 }
 
 img {
@@ -86,6 +86,9 @@ footer .left-footer ul,
 }
 footer .left-footer li,
 .central-footer li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   list-style: none;
   cursor: pointer;
 }
@@ -96,3 +99,9 @@ footer .right-footer {
   padding: 40px 20px;
   cursor: pointer;
 }
+.left-footer i, .central-footer i, .right-footer i{
+  font-size: 20px;
+}
+.left-footer p, .central-footer p, .right-footer p{padding: 10px;
+}
+
