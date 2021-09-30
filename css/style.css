@@ -1,3 +1,4 @@
+/* GLOBAL */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,13 +8,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
 }
+/* HEADER */
 header {
   display: flex;
   justify-content: flex-end;
-  /* position: fixed; */
-  top: 0;
-  z-index: 999;
-  width: 100%; /*dare la width se uso fixed*/
+  /* position: fixed; top: 0;
+  z-index: 999;  non mi serve poichè in questo specifico caso avendo main con height fissa mi basta che scorri il suo container con una scroll*/ 
+  /*width: 100%; dare la width se uso fixed*/
   height: 50px;
   padding: 8px;
   background-color: black;
@@ -35,7 +36,7 @@ header .speaker-view {
 header .full-screen {
   width: 35px;
 }
-
+/* MAIN */
 main {
   height: calc(100vh - 150px);
 }
@@ -70,7 +71,7 @@ img {
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.6);
 }
-
+/* FOOTER */
 footer {
   display: flex;
   justify-content: space-between;
