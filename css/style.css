@@ -13,7 +13,7 @@ header {
   display: flex;
   justify-content: flex-end;
   /* position: fixed; top: 0;
-  z-index: 999;  non mi serve poichè in questo specifico caso avendo main con height fissa mi basta che scorri il suo container con una scroll*/ 
+  z-index: 999;  non mi serve poichè in questo specifico caso avendo main con height fissa mi basta che scorri il suo container con una scroll*/
   /*width: 100%; dare la width se uso fixed*/
   height: 50px;
   padding: 8px;
@@ -46,15 +46,15 @@ main .container-pic {
   justify-content: space-evenly;
   flex-wrap: wrap; /*cosi vanno a capo*/
   width: 100%;
-  height: 100%;
-  margin: auto;
-  overflow-y: scroll
+  height: 100%; /* se non la mettessi allora non avendo piu un contenitore di conseguenza il footer salirebbe */
+  padding: 20px;
+  overflow-y: scroll; /*mi permette di far scrollare il container e dunque avendo il main con altezza fissa non ho bisogno di usare header e footer fixed, l'effetto è lo stesso*/
 }
 
 .container-pic .pic {
   position: relative;
 
-  width: 192px;
+  width: 180px;
   height: 100px;
 }
 
@@ -81,6 +81,10 @@ footer {
   color: white;
 }
 
+.left-footer, .central-footer, .right-footer{
+  flex-shrink: 0; /*evita il restringimento delle icone*/
+}
+
 footer .left-footer ul,
 .central-footer ul {
   display: flex;
@@ -93,16 +97,22 @@ footer .left-footer li,
   list-style: none;
   cursor: pointer;
 }
-
+#active {
+  color: limegreen;
+}
 footer .right-footer {
   color: #f70302;
   background-color: #4a4a4a;
   padding: 40px 20px;
   cursor: pointer;
 }
-.left-footer i, .central-footer i, .right-footer i{
+.left-footer i,
+.central-footer i,
+.right-footer i {
   font-size: 20px;
 }
-.left-footer p, .central-footer p, .right-footer p{padding: 10px;
+.left-footer p,
+.central-footer p,
+.right-footer p {
+  padding: 10px;
 }
-
